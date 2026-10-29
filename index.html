@@ -2180,6 +2180,21 @@ nav.top.scrolled .nav-links{box-shadow:3px 3px 0 #111}
   .hero-claim{font-size:clamp(44px,4.7vw,76px) !important;margin-bottom:14px !important}
   .hero-support{margin-bottom:20px !important;padding:12px 20px}
 }
+/* Carolina: texto real sobre la imagen (la zona izquierda de la imagen está en blanco) */
+.caro-wrap{position:relative}
+.caro-text{position:absolute;left:3.6%;top:6.5%;width:36.5%;max-height:73%;line-height:1.5;color:#1A1A1A;z-index:2}
+#carolina .caro-eyebrow{display:block;text-align:left;margin:0 0 1.1vw;line-height:1.2;font-size:clamp(18px,1.7vw,30px)}
+#carolina .caro-h2{font-family:'Nunito',var(--body);font-weight:900;letter-spacing:-.025em;line-height:1.08;color:#111;font-size:clamp(28px,3.1vw,58px);margin:0 0 1.5vw;text-wrap:balance}
+#carolina .caro-bio{font-family:var(--body);font-size:clamp(13px,1.06vw,19px);line-height:1.55;color:#333}
+#carolina .caro-bio p{margin:0 0 .85em}
+#carolina .caro-bio strong{font-weight:800;color:#111}
+@media (max-width:1180px){
+  .caro-text{position:static;width:auto;max-width:760px;max-height:none;padding:64px 20px 8px;margin:0 auto}
+  #carolina .caro-eyebrow{margin-bottom:14px}
+  #carolina .caro-h2{font-size:clamp(30px,7vw,44px);margin-bottom:18px}
+  #carolina .caro-bio{font-size:16px}
+  .caro-wrap{display:flex;flex-direction:column-reverse}
+}
 /* Recorrido: título fuera del bloque anclado en pantallas bajas */
 .curr-heading.curr-head-out{margin-top:clamp(96px,12vw,160px)}
 .curr-track.head-out{margin-top:8px !important}
@@ -2719,9 +2734,18 @@ nav.top.scrolled .nav-links{box-shadow:3px 3px 0 #111}
 </section>
 
 <section id="carolina" data-screen-label="Carolina">
-  <img src="assets/img/carolina.webp"
-       alt="Carolina Escudé — La persona detrás del programa"
-       class="carolina-full-img reveal">
+  <div class="caro-wrap">
+    <img src="assets/img/carolina-v2.webp" alt="Carolina Escudé, fundadora de Eat &amp; Learn" class="carolina-full-img reveal" loading="lazy">
+    <div class="caro-text">
+      <span class="eyebrow caro-eyebrow reveal">Quién hay detrás</span>
+      <h2 class="caro-h2 reveal delay-1">La persona detrás del <span class="curr-hl">programa.</span></h2>
+      <div class="caro-bio reveal delay-2">
+        <p>Carolina Escudé cuenta con una trayectoria profesional y formativa que combina gestión empresarial, gastronomía, restauración y educación alimentaria, con formación universitaria especializada en nutrición, tecnología alimentaria y alimentación para colectividades.</p>
+        <p>Su experiencia desarrollando proyectos gastronómicos y educativos, y trabajando directamente con niños, le ha permitido comprender que aprender a comer bien va mucho más allá de conocer los alimentos.</p>
+        <p>Su enfoque nace de la experiencia, de observar cómo aprenden los niños y de una convicción: los hábitos saludables no se construyen desde la prohibición o la culpa, sino desde <strong>el conocimiento, la curiosidad y el descubrimiento.</strong></p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ============ CTA FINAL ============ -->
